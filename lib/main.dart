@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: [
-        const Locale('en', ''), // الإنجليزية
-        const Locale('ar', ''), // العربية
-        // أضف لغات أخرى إذا لزم الأمر
+
+        const Locale('ar', ''), 
+
       ],
-      locale: Locale('ar'), // لغة التطبيق الافتراضية (العربية)
+      locale: Locale('ar'), 
       debugShowCheckedModeBanner: false,
       home: SplashView(),
     );

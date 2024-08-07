@@ -12,6 +12,8 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,9 +60,10 @@ class _LoginViewState extends State<LoginView> {
               ),
               TextFiledWidget(
                 hintext: 'ادخل الايميل او رقم الهوية هنا',
+                controller: emailController,
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.03, 
               ),
               Align(
                 alignment: Alignment.topRight,
@@ -76,18 +79,23 @@ class _LoginViewState extends State<LoginView> {
               TextFiledWidget(
                 hintext: "ادخل كلمة المرور",
                 isPassword: true,
+                controller: passwordController,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
               ),
               Align(
                 alignment: Alignment.topRight,
-                child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "نسيت كلمة المرور",
-                      style: GoogleFonts.cairo(
-                          color: AppColors.primaryColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500),
-                    )),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    "نسيت كلمة المرور",
+                    style: GoogleFonts.cairo(
+                        color: AppColors.primaryColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 5,
